@@ -1,3 +1,3 @@
-function alert() {
+function alert1() {
     alert(123);
 }

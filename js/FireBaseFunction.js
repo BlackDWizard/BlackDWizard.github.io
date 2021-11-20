@@ -30,3 +30,6 @@ onAuthStateChanged(auth, user => {
     }
 });
 
+$('#insertData').click(function () {
+    set(ref(db), "123");
+});

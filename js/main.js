@@ -8,5 +8,5 @@ $('#backToSignPage').click(function () {
 
 
 $('#loginToInsert').click(function () {
-    setTimeout(() => { location.href = "./sites/1.html"; }, 500);
+    window.location.href = "./sites/1.html";
 });

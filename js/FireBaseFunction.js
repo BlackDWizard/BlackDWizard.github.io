@@ -1,6 +1,6 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js'
 import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js'
-import { getDatabase } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
+import { getDatabase, ref } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDhdF6xcIZKROi23uJjuKzht3sReSKD0K0",
@@ -31,7 +31,7 @@ onAuthStateChanged(auth, user => {
 });
 
 $('#insertData').click(function () {
-    db.ref("/chinese/Bob").set({
+    ref(db, "/chinese/Bob").set({
         grade: 80
     })
         .then(function () {

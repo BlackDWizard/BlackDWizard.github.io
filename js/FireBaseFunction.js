@@ -1,5 +1,6 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js'
 import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js'
+import { getDatabase } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDhdF6xcIZKROi23uJjuKzht3sReSKD0K0",
@@ -15,7 +16,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
-// const db = getFirestore(app);
+const db = getDatabase(app);
 
 auth.onAuthStateChanged(user => {
 
@@ -28,3 +29,14 @@ onAuthStateChanged(auth, user => {
         console.log("No User");
     }
 });
+
+$('#insertData').click(function () {
+    db.ref("/chinese/Bob").set({
+        grade: 80
+    })
+        .then(function () {
+            alert("建立成功");
+        }).catch(function () {
+            alert("伺服器發生錯誤，請稍後再試");
+        });
+})

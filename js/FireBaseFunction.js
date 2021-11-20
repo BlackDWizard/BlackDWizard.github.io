@@ -1,5 +1,5 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js'
-import { auth } from 'https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js'
+import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js'
 
 const firebaseConfig = {
     apiKey: "AIzaSyDhdF6xcIZKROi23uJjuKzht3sReSKD0K0",
@@ -15,7 +15,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
-const db = getFirestore(app);
+// const db = getFirestore(app);
 
 auth.onAuthStateChanged(user => {
 

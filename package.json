@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "node ./js/main.js"
+  },
+  "dependencies": {
+    "firebase": "^9.5.0",
+    "webpack": "^5.64.1"
+  }
+}

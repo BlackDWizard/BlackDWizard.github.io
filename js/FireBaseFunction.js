@@ -1,3 +1,6 @@
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js'
+import { auth } from 'https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js'
+
 const firebaseConfig = {
     apiKey: "AIzaSyDhdF6xcIZKROi23uJjuKzht3sReSKD0K0",
     authDomain: "checkinsystem-6df61.firebaseapp.com",

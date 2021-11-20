@@ -1,11 +1,5 @@
-function alert1() {
-    alert(123);
-}
+import { jquery } from "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js";
 
-function alert2() {
-    window.location.replace("./sites/1.html");
-}
-
-function alert3() {
-
-}
+$('.message a').click(function () {
+    $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
+});

@@ -3,5 +3,5 @@ function alert1() {
 }
 
 function alert2() {
-    $("#mainPage").load("./sites/1.html"));
+    $("#mainPage").load("./sites/1.html");
 }

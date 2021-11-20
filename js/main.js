@@ -5,3 +5,8 @@ $('.message a').click(function () {
 $('#backToSignPage').click(function () {
     window.location.replace("../index.html");
 });
+
+
+$('#loginToInsert').click(function () {
+    window.location.replace("./sites/1.html");
+});

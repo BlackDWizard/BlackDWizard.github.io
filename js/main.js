@@ -3,9 +3,9 @@ function alert1() {
 }
 
 function alert2() {
-    $("#mainPage").load("./sites/1.html");
+    window.location.replace("./sites/1.html");
 }
 
 function alert3() {
-    $("#Page1").load("../index.html");
+
 }

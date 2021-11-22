@@ -15,6 +15,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+
 const fs = getFireStore(app);
 const userInfoRef = collection(fs, "UserInfo");
 
@@ -31,8 +32,10 @@ onAuthStateChanged(auth, user => {
 });
 
 $('#insertData').click(function () {
-    await setDoc(doc(userInfoRef, "2"), {
-        name: "Sam", email: "xxxx@gg.com", password: "123456"
+    setDoc(doc(userInfoRef, "2"), {
+        name: "Sam",
+        email: "xxxx@gg.com",
+        password: "123456"
     });
 });
 

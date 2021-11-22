@@ -1,6 +1,6 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js'
 import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js'
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
+import { collection, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-database.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDhdF6xcIZKROi23uJjuKzht3sReSKD0K0",
@@ -14,9 +14,9 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-
 const auth = getAuth(app);
-const db = getDatabase(app);
+const fs = getFireStore(app);
+const userInfoRef = collection(fs, "UserInfo");
 
 auth.onAuthStateChanged(user => {
 
@@ -31,5 +31,8 @@ onAuthStateChanged(auth, user => {
 });
 
 $('#insertData').click(function () {
-    set(ref(db), "123");
+    await setDoc(doc(userInfoRef, "2"), {
+        name: "Sam", email: "xxxx@gg.com", password: "123456"
+    });
 });
+

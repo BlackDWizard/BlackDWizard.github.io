@@ -6,7 +6,6 @@ $('#backToSignPage').click(function () {
     window.location.href = "../index.html";
 });
 
-
 $('#loginToInsert').click(function () {
     window.location.href = "./sites/1.html";
 });

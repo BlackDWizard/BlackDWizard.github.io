@@ -1,6 +1,6 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js'
 import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js'
-import { collection, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-firestore.js";
+import { getFirestore, collection, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-firestore.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDhdF6xcIZKROi23uJjuKzht3sReSKD0K0",

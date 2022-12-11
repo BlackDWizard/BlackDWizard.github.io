@@ -15,5 +15,9 @@ $("#ddlPlaySpeed").change(() => {
     alert($("#ddlPlaySpeed").val());
 })
 
+$("#playBlock").change(() => {
+    audio.play();
+})
+
 var audio = new Audio("../assets/audio/TempleBlock.mp3");
 

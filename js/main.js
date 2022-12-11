@@ -9,3 +9,10 @@ $('#backToSignPage').click(function () {
 $('#loginToInsert').click(function () {
     window.location.href = "./sites/1.html";
 });
+
+$("#ddlPlaySpeed").change(() => {
+    alert($("#ddlPlaySpeed").val());
+})
+
+var audio = new Audio("../assets/audio/TempleBlock.mp3");
+

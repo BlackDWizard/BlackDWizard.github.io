@@ -14,13 +14,17 @@ $('#loginToInsert').click(function () {
 });
 
 $("#ddlPlaySpeed").change(() => {
-    // alert($("#ddlPlaySpeed").val());
+    BlockInterval = setInterval(() => {
+        audio.play();
+        console.log("block!");
+    }, 1000 / $("#ddlPlaySpeed").val())
 })
 
 $("#playBlock").click(() => {
     BlockInterval = setInterval(() => {
         audio.play();
-    }, 1000 / $("#ddlPlaySpeed").val())
+        console.log("block!");
+    }, 1000)
 })
 
 $("#stopBlock").click(() => {

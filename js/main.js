@@ -15,7 +15,7 @@ $("#ddlPlaySpeed").change(() => {
     alert($("#ddlPlaySpeed").val());
 })
 
-$("#playBlock").change(() => {
+$("#playBlock").click(() => {
     audio.play();
 })
 

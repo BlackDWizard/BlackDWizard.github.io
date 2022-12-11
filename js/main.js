@@ -1,3 +1,5 @@
+let BlockInterval;
+
 $('.message a').click(function () {
     $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
 });
@@ -12,12 +14,19 @@ $('#loginToInsert').click(function () {
 });
 
 $("#ddlPlaySpeed").change(() => {
-    alert($("#ddlPlaySpeed").val());
+    // alert($("#ddlPlaySpeed").val());
 })
 
 $("#playBlock").click(() => {
-    audio.play();
+    BlockInterval = setInterval(() => {
+        audio.play();
+    }, 1000 / $("#ddlPlaySpeed").val())
 })
+
+$("#stopBlock").click(() => {
+    clearInterval(BlockInterval);
+})
+
 
 var audio = new Audio("../assets/audio/TempleBlock.mp3");
 

@@ -7,7 +7,8 @@ $('#backToSignPage').click(function () {
 });
 
 $('#loginToInsert').click(function () {
-    window.location.href = "./sites/1.html";
+    alert("123");
+    // window.location.href = "./sites/1.html";
 });
 
 $("#ddlPlaySpeed").change(() => {
